@@ -13,6 +13,12 @@ router.get('/walkers', getResouces(walkersURL));
 router.get('/dogs', getResouces(dogsURL));
 router.get('/companies', getResouces(companiesURL));
 
+router.get('/owners/:id', getFilterID(ownersURL));
+router.get('/walkers/:id', getFilterID(walkersURL));
+router.get('/dogs/:id', getFilterID(dogsURL));
+router.get('/companies/:id', getFilterID(companiesURL));
+
+
 
 function getResouces(resource) {
   return function (req, res) {
@@ -26,6 +32,47 @@ function getResouces(resource) {
 }
 
 
+function getFilterID(resource) {
+  return function (req, res) {
+    let id = req.params.id;
+    console.log(id);
+    let request = `${resource}${'/'}${id}`
+    console.log(request);
+    rp(request)
+    .then(result => {
+      let resultArray = JSON.parse(result);
+      console.log(resultArray);
+      res.render('show', {
+        result: resultArray
+      })
+    })
+  }
+}
+
+
+
+// router.get('/dogs', (req, res, next) => {
+//   rp(dogsURL)
+//   .then(dogs => {
+//     res.json({dogs})
+//   })
+// })
+//
+// router.get('/walkers', (req, res, next) => {
+//   rp(walkersURL)
+//   .then(walkers => {
+//     res.json({walkers})
+//   })
+// })
+//
+// router.get('/companies', (req, res, next) => {
+//   rp(companiesURL)
+//   .then(companies => {
+//     res.json({companies})
+//   })
+// })
+//
+
 
 // router.get('/owners', (req, res, next) => {
 //   rp(ownersURL)
@@ -35,29 +82,6 @@ function getResouces(resource) {
 //     res.render('index', {ownersArray})
 //   })
 // })
-
-router.get('/dogs', (req, res, next) => {
-  rp(dogsURL)
-  .then(dogs => {
-    res.json({dogs})
-  })
-})
-
-router.get('/walkers', (req, res, next) => {
-  rp(walkersURL)
-  .then(walkers => {
-    res.json({walkers})
-  })
-})
-
-router.get('/companies', (req, res, next) => {
-  rp(companiesURL)
-  .then(companies => {
-    res.json({companies})
-  })
-})
-
-
 
 
 module.exports = router;

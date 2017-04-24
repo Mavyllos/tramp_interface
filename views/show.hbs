@@ -1,0 +1,49 @@
+  <div class="container">
+    <h1>Resource Show Page </h1>
+    <div class="row">
+      <div class="col-md-2">
+        <img src=" {{ result.logo_img }}"
+          alt = "{{ result.logo_img }}"
+          class="image">
+      </div>
+      <div class="col-md-2">
+        <img src=" {{ result.image }}"
+          alt = "{{ result.image }}"
+          class="image">
+      </div>
+      <div class="col-md-6">
+        <h2>
+          <a href="/owners/{{ this.id }}">{{ result.first_name}} {{result.name}} </a>
+        </h2>
+            <p>{{result.first_name}}</p>
+            <p>{{result.last_name}}</p>
+            <p>{{result.description}}</p>
+            <p>{{result.bio}}</p>
+            <p>{{result.address_line_1}}</p>
+            <p>{{result.address_line_2}}</p>
+            <p>{{result.city}}</p>
+            <p>{{result.state}}</p>
+            <p>{{result.zip}}</p>
+            <p>{{result.phone_number}}</p>
+            <p>{{result.email_address}}</p>
+            <p>{{result.url}}</p>
+
+            <form action="/owners/{{ this.id }}?_method=DELETE" method="POST">
+              <input
+                class="btn btn-sm btn-danger"
+                type="submit"
+                name="delete"
+                value="Delete ">
+              </form>
+              <br>
+            <form action="/owners/{{ this.id }}/edit" method="GET">
+              <input
+                class="btn btn-sm btn-danger"
+                type="submit"
+                name="edit"
+                value="Edit">
+            </form>
+            </p>
+          </div>
+        </div>
+      </div>
