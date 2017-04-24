@@ -1,10 +1,62 @@
-var express = require('express');
-var router = express.Router();
-var db = require('../db/connection.js')
+'use strict';
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+const bcrypt = require('bcrypt-as-promised');
+const express = require('express');
+const knex = require('../db/connection.js');
+
+const router = express.Router();
+
+router.post('/users', (req, res, next) => {
+  const email = req.body.email;
+  const password = req.body.password;
+
+  if (!email || !email.trim()) {
+    return next({
+      status: 400,
+      message: 'Email must not be blank'
+    });
+  }
+
+  if ((!password) || (password.length < 8)) {
+    return next({
+      status: 400,
+      message: 'Password must be at least 8 characters long'
+    });
+  }
+
+  knex('users')
+  .where('email', email)
+  .then((users) => {
+    if (users[0]) {
+      return next({
+        status: 400,
+        message: 'Email already exists'
+      });
+    }
+  });
+
+  bcrypt.hash(password, 12)
+    .then((hashed_password) => {
+      return knex('users')
+      .insert({
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        email,
+        hashed_password
+      }, '*');
+    })
+    .then(() => {
+      delete user.hashed_password;
+
+      req.session.userId = user.id;
+
+      res.send(user);
+    })
+    .catch((err) => {
+      next(err);
+    });
 });
+
+
 
 module.exports = router;
