@@ -180,6 +180,4 @@ function deleteResource(resource) {
   }
 }
 
-
-
 module.exports = router;
