@@ -7741,8 +7741,47 @@ body {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   font-size: 24px;
   background-color: #FCFBF9;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  width: 100%;
+  height: 100%;
 }
 
 a {
   color: #43C0F6;
+}
+
+.intro-section, .services-section, .reviews-section {
+  height: 100%;
+  padding-top: 100px;
+  text-align: center;
+  background: #FCFBF9;
+}
+
+.about-section, .contact-section {
+  height: 100%;
+  padding-top: 100px;
+  text-align: center;
+  background: #F2EEE2;
+}
+
+.navbar img {
+  height: 60px;
+  width: auto;
+  position: fixed;
+}
+
+@media (min-width: 700px) {
+  .navbar {
+    padding: 0px 0;
+    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    transition: background .5s ease-in-out,padding .5s ease-in-out;
+  }
+  .top-nav-collapse {
+    padding: 0;
+  }
 }
