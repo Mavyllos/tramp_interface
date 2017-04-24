@@ -5,6 +5,7 @@ exports.up = function(knex) {
     table.increments();
     table.integer('owner_id').notNullable();
     table.integer('walker_id').notNullable();
+    table.specificType('hashed_password', 'char(60)').notNullable();
     table.timestamps(true, true);
   });
 };
