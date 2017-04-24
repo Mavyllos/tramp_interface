@@ -18,6 +18,10 @@ router.get('/walkers/:id', getFilterID(walkersURL));
 router.get('/dogs/:id', getFilterID(dogsURL));
 router.get('/companies/:id', getFilterID(companiesURL));
 
+router.post('/owners', createResource(ownersURL));
+router.post('/walkers', createResource(walkersURL));
+router.post('/dogs', createResource(dogsURL));
+router.post('/companies', createResource(companiesURL));
 
 
 function getResouces(resource) {
@@ -35,9 +39,7 @@ function getResouces(resource) {
 function getFilterID(resource) {
   return function (req, res) {
     let id = req.params.id;
-    console.log(id);
     let request = `${resource}${'/'}${id}`
-    console.log(request);
     rp(request)
     .then(result => {
       let resultArray = JSON.parse(result);
@@ -48,6 +50,61 @@ function getFilterID(resource) {
     })
   }
 }
+
+function createResource(resource) {
+  return function (req,res) {
+    let create = {
+      owner_id: req.body.owner_id,
+      walker_id: req.body.walker_id,
+      name: req.body.name,
+      description: req.body.description,
+      logo_img: req.body.logo_img,
+      url: req.body.url,
+      first_name: req.body.first_name,
+      last_name: req.body.last_name,
+      address_line_1: req.body.address_line_1,
+      address_line_2: req.body.address_line_2,
+      city: req.body.city,
+      state: req.body.state,
+      zip: req.body.zip ,
+      phone_number: req.body.phone_number,
+      email_address: req.body.email_address,
+      user_id: req.body.user_id,
+      breed: req.body.breed,
+      size: req.body.size,
+      allergies: req.body.allergies,
+      kids: req.body.kids,
+      other_dogs: req.body.other_dogs,
+      other_people: req.body.other_people,
+      fav_treat: req.body.fav_treat,
+      bio: req.body.bio,
+      image: req.body.image,
+    }
+    function clean(create) {
+      for (var propName in create) {
+        if (create[propName] === null || create[propName] === undefined) {
+          delete create[propName];
+        }
+      }
+    }
+    clean(create)
+
+    let request = {
+              method: 'POST',
+              uri: resource,
+              body: create,
+              json: true
+            };
+      console.log(request);
+    rp(request)
+    .then(result => {
+      // let resultArray = JSON.parse(result);
+      console.log(result);
+      res.render('index', {result})
+    })
+  }
+}
+
 
 
 
