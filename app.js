@@ -14,6 +14,7 @@ const companies = require('./routes/companies');
 const dogs = require('./routes/dogs');
 const owners = require('./routes/owners');
 const walkers = require('./routes/walkers');
+const session = require('./routes/session');
 const hbs = require('hbs');
 const hbsUtils = require('hbs-utils')(hbs);
 
@@ -52,6 +53,7 @@ app.use('/dogs', dogs);
 app.use('/owners', owners);
 app.use('/users', users);
 app.use('/walkers', walkers);
+app.use('/session',session);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

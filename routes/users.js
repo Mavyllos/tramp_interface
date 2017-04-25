@@ -39,8 +39,8 @@ router.post('/users', (req, res, next) => {
     .then((hashed_password) => {
       return knex('users')
       .insert({
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
+        user_id,
+        walker_id,
         email,
         hashed_password
       }, '*');
