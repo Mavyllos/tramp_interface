@@ -1,4 +1,11 @@
+'use strict';
+
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
+
 const express = require('express');
+const app = express();
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
@@ -6,6 +13,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const rp = require('request-promise');
+const cookieSession = require('cookie-session');
 
 const index = require('./routes/index');
 const users = require('./routes/users');
@@ -16,8 +24,6 @@ const walkers = require('./routes/walkers');
 const session = require('./routes/session');
 const hbs = require('hbs');
 const hbsUtils = require('hbs-utils')(hbs);
-
-var app = express();
 
 
 
@@ -44,6 +50,11 @@ hbsUtils.registerPartials(path.join(__dirname, 'views'), {
    return newName
  }
 })
+
+app.use(cookieSession({
+  name: 'tramp_interface',
+  secret: process.env.SESSION_SECRET
+}));
 
 app.use('/', index);
 app.use('/companies', companies);
