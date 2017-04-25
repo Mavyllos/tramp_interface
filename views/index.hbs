@@ -1,4 +1,7 @@
 <body>
+
+</div>
+  <div class="container">
     <section id="intro" class="intro-section">
         <div class="container">
             <div class="row">
@@ -24,8 +27,8 @@
                                         <div class="slide-text slide_style_left">
                                             <h1 data-animation="animated zoomInRight">Big words</h1>
                                             <p data-animation="animated fadeInLeft">Little words.</p>
-                                            <a href="/" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">Login</a>
-                                            <a href="/" target="_blank" class="btn btn-primary" data-animation="animated fadeInRight">Register</a>
+                                            <a data-toggle="modal" data-target="#at-login" class="btn btn-default" data-animation="animated fadeInLeft">Login</a>
+                                            <a data-toggle="/" class="btn btn-primary" data-animation="animated fadeInRight">Register</a>
                                         </div>
                                     </div>
                                 </div>
@@ -39,8 +42,8 @@
                                 <div class="slide-text slide_style_center">
                                     <h1 data-animation="animated flipInX">Big words</h1>
                                     <p data-animation="animated lightSpeedIn">Little words.</p>
-                                    <a href="/" target="_blank" class="btn btn-default" data-animation="animated fadeInUp">Login</a>
-                                    <a href="/" target="_blank" class="btn btn-primary" data-animation="animated fadeInDown">Register</a>
+                                    <a data-toggle="modal" data-target="#at-login" class="btn btn-default" data-animation="animated fadeInUp">Login</a>
+                                    <a data-toggle="/" class="btn btn-primary" data-animation="animated fadeInDown">Register</a>
                                 </div>
                             </div>
 
@@ -50,8 +53,8 @@
                                 <div class="slide-text slide_style_right">
                                     <h1 data-animation="animated zoomInLeft">Big Words</h1>
                                     <p data-animation="animated fadeInRight">Little words.</p>
-                                    <a href="/" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">Login</a>
-                                    <a href="/" target="_blank" class="btn btn-primary" data-animation="animated fadeInRight">Register</a>
+                                    <a data-toggle="modal" data-target="#at-login" class="btn btn-default" data-animation="animated fadeInLeft">Login</a>
+                                    <a data-toggle="/" class="btn btn-primary" data-animation="animated fadeInRight">Register</a>
                                 </div>
                             </div>
                         </div>
@@ -71,8 +74,11 @@
             </div>
         </div>
     </section>
+  </div>
 
+<main>
     <!-- About Section -->
+  <div class="container">
     <section id="about" class="about-section">
         <div class="container">
             <div class="row">
@@ -80,6 +86,7 @@
                     <h1>About Tramp</h1>
                     <br>
                     <p>
+                        Working late to finish a project? In early for a meeting? Running errands on lunch?
                         You can’t always know when you might have a ‘ruff’ day, but you can count on us to have you covered.
                         <br> Our network connects independent dog walking professionals with loving pet owners, to make sure your pup gets attention when you can’t be there.
                     </p>
@@ -91,43 +98,55 @@
             </div>
         </div>
     </section>
-
+</div>
     <!-- Walkers Section -->
+  <div class="container">
     <section id="walkers" class="walkers-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Featured Walkers</h1>
                     <div class="col-lg-12">
-                        <div class="row">
-                            <div class="col-xs-6 col-md-3">
-                                <a href="#" class="thumbnail">
-                                    <img src="http://placehold.it/171x180" alt="...">
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-md-3">
-                                <a href="#" class="thumbnail">
-                                    <img src="http://placehold.it/171x180" alt="...">
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-md-3">
-                                <a href="#" class="thumbnail">
-                                    <img src="http://placehold.it/171x180" alt="...">
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-md-3">
-                                <a href="#" class="thumbnail">
-                                    <img src="http://placehold.it/171x180" alt="...">
-                                </a>
-                            </div>
+                        <div class="row-featured">
+                          <div class="col-md-4">
+                            		<div>
+                        				<img src="http://lorempixel.com/200/200/abstract/1/" alt="..." class="img-circle img-thumbnail">
+                        				<h2>Diseño Web</h2>
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        				tempor incididunt ut labore et dolore magna aliqua.</p>
+                        				<a href="#" class="btn btn-primary" title="profile-1">Rick</a>
+                        			</div>
+                        		</div>
+
+                        		<div class="col-md-4">
+                        			<div>
+                        				<img src="http://lorempixel.com/200/200/abstract/2/" alt="..." class="img-circle img-thumbnail">
+                        				<h2>Desarrollo Web</h2>
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        				tempor incididunt ut labore et dolore magna aliqua.</p>
+                        				<a href="#" class="btn btn-primary" title="profile-2">Maggie</a>
+                        			</div>
+                        		</div>
+
+                        		<div class="col-md-4">
+                        			<div>
+                        				<img src="http://lorempixel.com/200/200/abstract/3/" alt="..." class="img-circle img-thumbnail">
+                        				<h2>Alojamiento Web</h2>
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        				tempor incididunt ut labore et dolore magna aliqua.</p>
+                        				<a href="#" class="btn btn-primary" title="profile-3">Glenn »</a>
+                        			</div>
+                        		</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+  </div>
 
     <!-- Services Section -->
+  <div class="container">
     <section id="reviews" class="reviews-section">
         <div class="container">
             <div class="row">
@@ -137,9 +156,12 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
                 </div>
+              </div>
     </section>
+  </div>
 
     <!-- FAQ Section -->
+    <div class="container">
     <section id="faq" class="faq-section">
         <div class="container">
             <div class="row">
@@ -153,4 +175,6 @@
             </div>
         </div>
     </section>
+  </div>
+</main>
 </body>
