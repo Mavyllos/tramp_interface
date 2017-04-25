@@ -9,7 +9,7 @@ const router = express.Router();
 
 router.post('/', (req, res, next) => {
   const { email, password } = req.body;
-
+  console.log('in post', req.body);
   if (!email || !email.trim()) {
     return next({
       status: 400,
