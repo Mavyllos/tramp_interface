@@ -42,6 +42,7 @@ router.post('/', (req, res, next) => {
     })
     .then(() => {
       delete user.hashed_password;
+      req.session.userId = user.id;
 
       res.send(user);
     })
