@@ -3,6 +3,7 @@
 const bcrypt = require('bcrypt-as-promised');
 const express = require('express');
 const knex = require('../db/connection.js');
+const rp = require('request-promise')
 
 const router = express.Router();
 
@@ -43,9 +44,16 @@ router.post('/', (req, res, next) => {
     .then(() => {
       delete user.hashed_password;
       req.session.userId = user.id;
-      res.send(user);
+    })
+    .then(() => {
+      let request = `http://lit-garden-29083.herokuapp.com/walkers/${user.id}`;
 
-      res.send(user);
+      rp(request)
+        .then((result)=> {
+          let resultArray = JSON.parse(result);
+          res.render('showData', {
+          result: resultArray });
+        })
     })
     .catch(bcrypt.MISMATCH_ERROR, () => {
       throw {
