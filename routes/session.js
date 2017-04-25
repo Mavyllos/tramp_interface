@@ -43,6 +43,7 @@ router.post('/', (req, res, next) => {
     .then(() => {
       delete user.hashed_password;
       req.session.userId = user.id;
+      res.send(user);
 
       res.send(user);
     })
@@ -55,6 +56,12 @@ router.post('/', (req, res, next) => {
     .catch((err) => {
       next(err);
     });
+});
+
+router.delete('/', (req, res, next) => {
+  req.session = null;
+
+  res.sendStatus(200);
 });
 
 module.exports = router;
