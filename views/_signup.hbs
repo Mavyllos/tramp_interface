@@ -1,0 +1,131 @@
+<section class="at-login-form">
+  <!-- MODAL LOGIN -->
+  <div class="modal fade" id="at-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        </div>
+        <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <input type="email" class="form-control-form " id="exampleInputEmaillog" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control-form " id="exampleInputPasswordpas" placeholder="Password">
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> Remember me
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-md-offset-2">
+                    <p class="frgt-pswd"   data-toggle="modal" data-dismiss="modal"  data-target="#at-reset-pswd">	Forgot Password?</p>
+                  </div>
+                </div>
+                <button type="submit" class="btn-lgin">Login</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="ta-l">Don't have an account? </p>
+                </div>
+                <div class="col-md-4 col-md-offset-2">
+                  <button class="btn-gst"  data-toggle="modal"  data-dismiss="modal" data-target="#at-signup" >Sign Up </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MODAL LOGIN ENDS -->
+      <!-- MODAL SIGNUP -->
+
+            <div class="modal fade" id="at-signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <form action="/users" method="POST">
+                      <!-- <div class="form-group">
+                        <input type="text" class="form-control-form " id="first_name" placeholder="First Name"
+                        value="{{ owners.first_name }}">
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control-form " id="last_name" placeholder="Last Name" value="{{ owners.last_name }}">
+                      </div> -->
+                      <div class="form-group">
+                        <input type="email" class="form-control-form " id="owner_email" placeholder="Email" value="{{ users.email }}">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control-form " id="exampleInputPasswordpas" placeholder="Password" value="{{ users.hashed_password }}">
+                      </div>
+                          <p class="modal-body">By signing up, I agree to Tramp’s <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+                      <button type="submit" class="btn-lgin">Signup</button>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p class="ta-l">Already a Member? </p>
+                      </div>
+                      <div class="col-md-4 col-md-offset-2">
+                        <button class="btn-gst"  data-toggle="modal"  data-dismiss="modal" data-target="#at-login">Login</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!-- MODAL FORGOT PASSWORD -->
+          <div class="modal fade" id="at-reset-pswd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <p>	Enter the email address associated with your account, and we’ll email you a link to reset your password. </p>
+                    <div class="form-group">
+
+                      <input type="email" class="form-control-form " id="exampleInputEmaillog" placeholder="Email">
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- MODAL HELP -->
+          <div class="modal fade" id="at-helping" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control-form " id="exampleInputEmaillog" placeholder="Enter Your Searches ">
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <div class="row">
+                    <button class="btn-gst"  data-toggle="modal"  data-dismiss="modal" >Send a reset link</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
