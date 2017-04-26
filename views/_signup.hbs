@@ -7,9 +7,16 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
         </div>
         <div class="modal-body">
+          <div class="well">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#login-as-owner" data-toggle="tab">Login as Dog Owner</a></li>
+            <li><a href="#login-as-walker" data-toggle="tab">Login as Dog Walker</a></li>
+          </ul>
+          <div id="myTabContent" class="tab-content">
+              <div class="tab-pane active in" id="login-as-owner">
               <form action="session" method="post">
                 <fieldset class="form-group">
-                  <input type="email" class="form-control-form " id="email" placeholder="email" name="email" value="{{ this.email}}">
+                  <input type="email" class="form-control-form " id="email" placeholder="owner email" name="email" value="{{ this.email}}">
                   <input type="password" class="form-control-form " id="password" placeholder="Password" name="password" value="{{ this.password }}">
                 </fieldset>
                 <div class="row">
@@ -27,6 +34,28 @@
                 <button type="submit" class="btn-lgin">Login</button>
               </form>
             </div>
+                <div class="tab-pane fade" id="login-as-walker">
+                <form action="session2" method="post" id="tab">
+                  <fieldset class="form-group">
+                    <input type="email" class="form-control-form " id="email" placeholder="walker email" name="email" value="{{ this.email}}">
+                    <input type="password" class="form-control-form " id="password" placeholder="Password" name="password" value="{{ this.password }}">
+                  </fieldset>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Remember me
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-md-offset-2">
+                      <p class="frgt-pswd"   data-toggle="modal" data-dismiss="modal"  data-target="#at-reset-pswd">	Forgot Password?</p>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn-lgin">Login</button>
+                </form>
+              </div>
+            </div>
             <div class="modal-footer">
               <div class="row">
                 <div class="col-md-6">
@@ -38,7 +67,10 @@
               </div>
             </div>
           </div>
+          </div>
         </div>
+        </div>
+      </div>
       </div>
       <!-- MODAL LOGIN ENDS -->
       <!-- MODAL SIGNUP -->
