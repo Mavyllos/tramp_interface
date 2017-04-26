@@ -1,6 +1,8 @@
 # Tramp
 
-An application developed with the independent dog walker in mind.  Tramp allows the independent dog walker the ability to manage their clients, schedules, and payment process.  Tramp also allows for the independent minded dog owner to schedule walks with dog walkers in their area, along with allowing easy payment method.
+An application developed with the independent dog walker in mind.  Tramp allows the independent dog walker the ability to manage their clients, schedules, and payment process.  
+
+Tramp is the premier gateway for the independent minded dog owner to schedule walks with dog walkers in their neighborhood.  It also provides easy payment management.
 
 # Landing Page
 
