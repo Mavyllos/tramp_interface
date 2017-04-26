@@ -9,6 +9,8 @@ const router = express.Router();
 router.post('/users', (req, res, next) => {
   const email = req.body.email;
   const password = req.body.password;
+  const walker_id = req.body.walker_id;
+  const owner_id = req.body.owner_id;
 
   if (!email || !email.trim()) {
     return next({
@@ -46,7 +48,7 @@ router.post('/users', (req, res, next) => {
       }, '*');
     })
     .then(() => {
-      delete user.hashed_password;
+      user.hashed_password;
 
       req.session.userId = user.id;
 
