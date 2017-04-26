@@ -51,7 +51,7 @@ router.post('/', (req, res, next) => {
       rp(request)
         .then((result)=> {
           let resultArray = JSON.parse(result);
-          res.render('showData', {
+          res.render('showDataWalkers', {
           result: resultArray });
         })
     })

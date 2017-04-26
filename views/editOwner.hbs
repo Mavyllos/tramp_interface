@@ -1,5 +1,4 @@
 <body>
-
 <div class="container">
 <div class="row">
 <div class="col-md-10 ">
@@ -10,10 +9,6 @@
 <legend>{{result.first_name}}'s Profile</legend>
 
 <!-- Text input-->
-
-
-
-
 <div class="form-group">
   <label class="col-md-4 control-label" for="first_name_label">First Name</label>
   <div class="col-md-4">
@@ -28,7 +23,7 @@
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label" for="last_name_label">First Name</label>
+  <label class="col-md-4 control-label" for="last_name_label">Last Name</label>
   <div class="col-md-4">
  <div class="input-group">
        <div class="input-group-addon">
@@ -90,38 +85,6 @@
 </div>
 
 
-<!-- File Button -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Upload photo">Upload photo</label>
-  <div class="col-md-4">
-    <input id="Upload photo" name="Upload photo" class="input-file" type="file">
-  </div>
-</div>
-
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="url-label">URL Address</label>
-  <div class="col-md-4">
-  <div class="input-group">
-       <div class="input-group-addon">
-     <i class="fa fa-globe"></i>
-       </div>
-      <input id="url" name="url" type="text" placeholder="{{result.url}}" class="form-control input-md">
-      </div>
-  </div>
-</div>
-
-
-<!-- Textarea -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Overview (max 225 words)">Bio (max 200 words)</label>
-  <div class="col-md-8">
-    <textarea class="form-control" rows="10"  id="bio" name="bio" placeholder="{{result.bio}}"></textarea>
-  </div>
-</div>
-
-
 <div class="form-group">
   <label class="col-md-4 control-label" ></label>
   <div class="col-md-4">
@@ -134,63 +97,7 @@
 </fieldset>
 </form>
 </div>
-<!-- Image -->
-<div class="col-md-2 hidden-xs">
-  <img src="{{result.img}}" class="img-responsive img-thumbnail ">
-</div>
 </div>
 </div>
 
 </body>
-
-
-<!--
-  <div class="container">
-    <h1>{{result.first_name}}'s Profile</h1>
-    <div class="row">
-      <div class="col-md-2">
-        <img src=" {{ result.logo_img }}"
-          alt = "{{ result.logo_img }}"
-          class="image">
-      </div>
-      <div class="col-md-2">
-        <img src=" {{ result.image }}"
-          alt = "{{ result.image }}"
-          class="image">
-      </div>
-      <div class="col-md-6">
-        <h2>
-          <a href="/owners/{{ this.id }}">{{ result.first_name}} {{result.name}} </a>
-        </h2>
-            <p>{{result.first_name}}</p>
-            <p>{{result.last_name}}</p>
-            <p>{{result.description}}</p>
-            <p>{{result.bio}}</p>
-            <p>{{result.address_line_1}}</p>
-            <p>{{result.address_line_2}}</p>
-            <p>{{result.city}}</p>
-            <p>{{result.state}}</p>
-            <p>{{result.zip}}</p>
-            <p>{{result.phone_number}}</p>
-            <p>{{result.email_address}}</p>
-            <p>{{result.url}}</p>
-
-            <form action="/owners/{{ this.id }}?_method=DELETE" method="POST">
-              <input
-                class="btn btn-sm btn-danger"
-                type="submit"
-                name="delete"
-                value="Delete ">
-              </form>
-              <br>
-            <form action="/owners/{{ this.id }}/edit" method="GET">
-              <input
-                class="btn btn-sm btn-danger"
-                type="submit"
-                name="edit"
-                value="Edit">
-            </form>
-            </p>
-          </div>
-        </div>
-      </div> -->

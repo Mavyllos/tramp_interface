@@ -44,7 +44,7 @@ router.post('/', (req, res, next) => {
     .then(() => {
       delete user.hashed_password;
       req.session.userId = user.owner_id;
-  
+
     })
     .then(() => {
       let request = `https://young-anchorage-23408.herokuapp.com/owners/${user.owner_id}`;
@@ -53,7 +53,7 @@ router.post('/', (req, res, next) => {
       rp(request)
         .then((result)=> {
           let resultArray = JSON.parse(result);
-          res.render('showData', {
+          res.render('showDataOwners', {
           result: resultArray });
         })
     })

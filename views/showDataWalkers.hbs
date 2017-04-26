@@ -1,0 +1,63 @@
+<body>
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-4">
+        <p>
+        <img src="{{ result.image }}"
+        alt="{{ result.first_name }}" height="300" width="300"
+        class="user-image">
+        </p>
+      <p>
+        <a href="">Edit Profile</a>
+      </p>
+    </div>
+
+    <div class="col-8">
+      <p>
+          <strong>First Name:</strong>
+          <span>{{result.first_name}}</span>
+      </p>
+      <p>
+          <strong>Last Name:</strong>
+          <span>{{result.last_name}}</span>
+      </p>
+      <p>
+          <strong>Address Line 1:</strong>
+          <span>{{result.address_line_1}}</span>
+      </p>
+      <p>
+          <strong>Address Line 2:</strong>
+          <span>{{result.address_line_2}}</span>
+      </p>
+      <p>
+          <strong>City:</strong>
+          <span>{{result.city}}</span>
+      </p>
+      <p>
+          <strong>State:</strong>
+          <span>{{result.state}}</span>
+      </p>
+      <p>
+          <strong>Zip:</strong>
+          <span>{{result.zip}}</span>
+      </p>
+      <p>
+          <strong>Phone Number:</strong>
+          <span>{{result.phone_number}}</span>
+      </p>
+      <p>
+          <strong>Email Address:</strong>
+          <span>{{result.email_address}}</span>
+      </p>
+      <p>
+          <strong>URL Address:</strong>
+          <span>{{result.url_Address}}</span>
+      </p>
+      <p>
+          <strong>Bio:</strong>
+          <span>{{result.bio}}</span>
+      </p>
+    </div>
+  </div>
+</div>
+</body>
