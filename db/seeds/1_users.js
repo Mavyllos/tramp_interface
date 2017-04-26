@@ -11,7 +11,17 @@ exports.seed = function(knex) {
         created_at: new Date('2016-06-29 14:26:16 UTC'),
         updated_at: new Date('2016-06-29 14:26:16 UTC'),
         hashed_password: '$2a$12$LaKBUi8mCFc/9LiCtvwcvuNIjgaq9LJuy/NO.m4P5.3FP8zA6t2Va'
-      }]);
+      },
+      {
+        id: 2,
+        owner_id: 1,
+        walker_id:null,
+        email: 'thequeen@hotmail.com',
+        created_at: new Date('2016-06-29 14:26:16 UTC'),
+        updated_at: new Date('2016-06-29 14:26:16 UTC'),
+        hashed_password: '$2a$12$LaKBUi8mCFc/9LiCtvwcvuNIjgaq9LJuy/NO.m4P5.3FP8zA6t2Va'
+      }
+    ]);
     })
     .then(() => {
       return knex.raw(
