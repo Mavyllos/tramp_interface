@@ -82,11 +82,8 @@
             <div class="panel panel-default">
             <div class="panel-body">
               <p>Actions<br>
-                <!-- <a href=""><span class="fa fa-pencil-square-o"></span> Edit Profile</a><br> -->
-                <form action="{{ result.user_id }}/editWalker">
-                  <input class="btn btn-sm btn-link" type="button"
-                  name="edit-button"><span class="fa fa-pencil-square-o"></span> Edit Profile </input>
-                </form></br>
+                <a href="/walkers/{{result.id}}"> Edit Profile</a><br>
+              
                 <a href=""><span class="fa fa-plus"></span> Add Company Info</a><br>
               </p>
               </div>

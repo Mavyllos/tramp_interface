@@ -66,6 +66,7 @@ app.use('/walkers', walkers);
 app.use('/session',session);
 app.use('/session2',session2);
 
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

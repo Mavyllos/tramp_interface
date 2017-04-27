@@ -11,7 +11,6 @@ function getResouces(resource) {
   }
 }
 
-
 function getFilterID(resource) {
   return function (req, res) {
     let id = req.params.id;
@@ -19,12 +18,42 @@ function getFilterID(resource) {
     rp(request)
     .then(result => {
       let resultArray = JSON.parse(result);
-      res.render('showData', {
+      res.render('indexData', {
         result: resultArray
       })
     })
   }
 }
+
+function getFilterIDOwner(resource) {
+  return function (req, res) {
+    let id = req.params.id;
+    let request = `${resource}${'/'}${id}`;
+    rp(request)
+    .then(result => {
+      let resultArray = JSON.parse(result);
+      res.render('editOwner', {
+        result: resultArray
+      })
+    })
+  }
+}
+
+
+function getFilterIDWalker(resource) {
+  return function (req, res) {
+    let id = req.params.id;
+    let request = `${resource}${'/'}${id}`;
+    rp(request)
+    .then(result => {
+      let resultArray = JSON.parse(result);
+      res.render('editWalker', {
+        result: resultArray
+      })
+    })
+  }
+}
+
 
 function createResource(resource) {
   return function (req,res) {
@@ -153,6 +182,8 @@ function deleteResource(resource) {
 module.exports = {
   getResouces,
   getFilterID,
+  getFilterIDOwner,
+  getFilterIDWalker,
   createResource,
   updateResource,
   deleteResource
