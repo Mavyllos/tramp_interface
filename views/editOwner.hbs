@@ -2,12 +2,11 @@
 <div class="container">
 <div class="row">
 <div class="col-md-10 ">
-<form class="form-horizontal">
 <fieldset class"userProfile">
 
 <!-- Form Name -->
 <legend>{{result.first_name}}'s Profile</legend>
-
+  <form method="POST" action="/owners/{{ result.id }}?_method=PUT">
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="first_name_label">First Name</label>
@@ -17,7 +16,7 @@
         <i class="fa fa-user-circle">
         </i>
        </div>
-       <input id="first_name" name="first_name" type="text" placeholder="{{result.first_name}}" class="form-control input-md">
+       <input id="first_name" name="first_name" type="text" value="{{result.first_name}}" class="form-control input-md">
       </div>
   </div>
 </div>
@@ -30,7 +29,7 @@
         <i class="fa fa-user-circle">
         </i>
        </div>
-       <input id="last_name" name="last_name" type="text" placeholder="{{result.last_name}}" class="form-control input-md">
+       <input id="last_name" name="last_name" type="text" value="{{result.last_name}}" class="form-control input-md">
       </div>
   </div>
 </div>
@@ -39,23 +38,23 @@
 <div class="form-group">
   <label class="col-md-4 control-label col-xs-12" for="Address">Address</label>
   <div class="col-md-8  col-xs-8">
-    <input id="address_line_1" name="address_line_1" type="text" placeholder="{{result.address_line_1}}" class="form-control input-md ">
+    <input id="address_line_1" name="address_line_1" type="text" value="{{result.address_line_1}}" class="form-control input-md ">
   </div>
   <label class="col-md-4 control-label col-xs-12" for="Address"></label>
   <div class="col-md-8  col-xs-8">
-    <input id="Paddress_line_2" name="address_line_2" type="text" placeholder="{{result.address_line_2}}" class="form-control input-md">
+    <input id="Paddress_line_2" name="address_line_2" type="text" value="{{result.address_line_2}}" class="form-control input-md">
   </div>
   <label class="col-md-4 control-label col-xs-12" for="Address"></label>
   <div class="col-md-8  col-xs-8">
-    <input id="city" name="city" type="text" placeholder="{{result.city}}" class="form-control input-md ">
+    <input id="city" name="city" type="text" value="{{result.city}}" class="form-control input-md ">
   </div>
   <label class="col-md-4 control-label col-xs-12" for="Address"></label>
   <div class="col-md-8  col-xs-8">
-    <input id="state" name="state" type="text" placeholder="{{result.state}}" class="form-control input-md ">
+    <input id="state" name="state" type="text" value="{{result.state}}" class="form-control input-md ">
   </div>
   <label class="col-md-4 control-label col-xs-12" for="Address"></label>
   <div class="col-md-8  col-xs-8">
-    <input id="zip" name="zip" type="number" placeholder="{{result.zip}}" class="form-control input-md ">
+    <input id="zip" name="zip" type="number" value="{{result.zip}}" class="form-control input-md ">
   </div>
 </div>
 
@@ -67,7 +66,7 @@
        <div class="input-group-addon">
          <i class="fa fa-phone"></i>
        </div>
-       <input id="phone_numebr" name="phone_number" type="tel" placeholder="{{result.phone_number}}" class="form-control input-md">
+       <input id="phone_numebr" name="phone_number" type="tel" value="{{result.phone_number}}" class="form-control input-md">
     </div>
   </div>
 </div>
@@ -79,7 +78,7 @@
          <div class="input-group-addon">
            <i class="fa fa-envelope-o"></i>
          </div>
-         <input id="email_address" name="email_address" type="text" placeholder="{{result.email_address}}" class="form-control input-md">
+         <input id="email_address" name="email_address" type="text" value="{{result.email_address}}" class="form-control input-md">
     </div>
   </div>
 </div>
@@ -87,15 +86,11 @@
 
 <div class="form-group">
   <label class="col-md-4 control-label" ></label>
-  <div class="col-md-4">
-  <a href="#" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-thumbs-up"></span> Submit</a>
-  <a href="#" class="btn btn-sm btn-danger" value=""><span class="glyphicon glyphicon-remove-sign"></span> Clear</a>
-
+      <button type="submit" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-thumbs-up"></span> Submit</button>
+    <a href="#" class="btn btn-sm btn-danger" value=""><span class="glyphicon glyphicon-remove-sign"></span> Clear</a>
   </div>
-</div>
-
-</fieldset>
 </form>
+</fieldset>
 </div>
 </div>
 </div>
