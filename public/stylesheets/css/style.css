@@ -7792,6 +7792,23 @@ main {
   margin-top: 15px;
 }
 
+#logout {
+  margin-top: 55px;
+}
+
+#logout a {
+  color: black;
+}
+
+#logout a:hover {
+  text-decoration: none;
+}
+
+h5 {
+  padding-top: 0;
+  margin-top: 0;
+}
+
 .navbar-nav > li > a {
   padding-top: 30px;
 }
@@ -8175,6 +8192,15 @@ main {
 
 .user-row {
   margin-top: 100px;
+}
+
+.user-row p, a {
+  font-size: 14px;
+}
+
+.main-panel {
+  margin-top: 25px;
+  background-color: #fdfdfc;
 }
 
 .bs-slider {
