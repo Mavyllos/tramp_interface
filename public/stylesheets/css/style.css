@@ -8016,6 +8016,10 @@ h5 {
   transition: 0.5s;
 }
 
+.walker {
+  font-size: 18px;
+}
+
 .modal-body, .modal-footer {
   font-size: 14px;
 }
