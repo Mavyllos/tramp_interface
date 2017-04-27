@@ -8173,6 +8173,10 @@ main {
   background-color: #1DB9EC;
 }
 
+.user-row {
+  margin-top: 100px;
+}
+
 .bs-slider {
   overflow: hidden;
   max-height: 500px;
