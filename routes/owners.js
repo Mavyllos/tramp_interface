@@ -6,7 +6,7 @@ const api = require('./api');
 router.get('/', api.getResouces(ownersURL));
 router.get('/:id', api.getFilterIDOwner(ownersURL));
 router.post('/', api.createResource(ownersURL));
-router.put('/:id', api.updateResource(ownersURL));
+router.put('/:id', api.updateResourceOwner(ownersURL));
 router.delete('/:id', api.deleteResource(ownersURL));
 
 

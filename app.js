@@ -32,12 +32,13 @@ const hbsUtils = require('hbs-utils')(hbs);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+
+app.use(methodOverride('_method'));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'paw-print-512.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 hbsUtils.registerPartials(path.join(__dirname, 'views'), {
@@ -51,6 +52,7 @@ hbsUtils.registerPartials(path.join(__dirname, 'views'), {
    return newName
  }
 })
+
 
 app.use(cookieSession({
   name: 'tramp_interface',

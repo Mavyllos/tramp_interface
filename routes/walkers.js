@@ -7,7 +7,7 @@ const api = require('./api');
 router.get('/', api.getResouces(walkersURL));
 router.get('/:id', api.getFilterIDWalker(walkersURL));
 router.post('/', api.createResource(walkersURL));
-router.put('/:id', api.updateResource(walkersURL));
+router.put('/:id', api.updateResourceWalker(walkersURL));
 router.delete('/:id', api.deleteResource(walkersURL));
 
 
