@@ -7792,6 +7792,23 @@ main {
   margin-top: 15px;
 }
 
+#logout {
+  margin-top: 55px;
+}
+
+#logout a {
+  color: black;
+}
+
+#logout a:hover {
+  text-decoration: none;
+}
+
+h5 {
+  padding-top: 0;
+  margin-top: 0;
+}
+
 .navbar-nav > li > a {
   padding-top: 30px;
 }
@@ -7863,7 +7880,7 @@ main {
   margin-left: 0;
   padding-left: 0;
   margin-top: 15px;
-  color: #1B96FE;
+  color: #43C0F6;
 }
 
 .footer ul li a {
@@ -7968,6 +7985,11 @@ main {
 
 .footer-bottom p.pull-left {
   padding-top: 6px;
+}
+
+.pull-left small {
+  font-size: 12px;
+  color: grey;
 }
 
 .payments {
@@ -8171,6 +8193,19 @@ main {
 
 .blue-bg-nav {
   background-color: #1DB9EC;
+}
+
+.user-row {
+  margin-top: 100px;
+}
+
+.user-row p, a {
+  font-size: 14px;
+}
+
+.main-panel {
+  margin-top: 25px;
+  background-color: #fdfdfc;
 }
 
 .bs-slider {

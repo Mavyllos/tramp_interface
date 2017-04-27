@@ -1,67 +1,88 @@
 <body>
-<div class="container-fluid">
-  <div class="row">
-      <div class="col-4">
-        <p>
-        <img src="{{ result.image }}"
-        alt="{{ result.first_name }}" height="300" width="300"
-        class="user-image">
-        </p>
-      <p>
-        <a href="">Edit Profile</a>
-      </p>
-    </div>
+  <div class="container-fluid">
+    <div class="row user-row">
+      <div class="panel panel-default">
+        <div class="panel-body main-panel">
+          <h5> Welcome {{result.first_name}} {{result.last_name}}</h5>
+          <div class="col-md-4">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <p>
+                  {{#if result.image}}
+                  <img src="{{ result.image }}"
+                  alt="{{ result.first_name }}" height="300" width="300"
+                  class="user-image">
+                  {{else}}
+                  {{/if}}
+                </p>
+                <p>
+                  <a href="">View Upcoming Appointments</a>
+                </p>
+                <p>
+                  <a href="">Favorite Walkers</a>
+                </p>
+              </div>
+            </div>
+          </div>
 
-    <div class="col-8">
-      <p>
-          <strong>First Name:</strong>
-          <span>{{result.first_name}}</span>
-      </p>
-      <p>
-          <strong>Last Name:</strong>
-          <span>{{result.last_name}}</span>
-      </p>
-      <p>
-          <strong>Address Line 1:</strong>
-          <span>{{result.address_line_1}}</span>
-      </p>
-      <p>
-          <strong>Address Line 2:</strong>
-          <span>{{result.address_line_2}}</span>
-      </p>
-      <p>
-          <strong>City:</strong>
-          <span>{{result.city}}</span>
-      </p>
-      <p>
-          <strong>State:</strong>
-          <span>{{result.state}}</span>
-      </p>
-      <p>
-          <strong>Zip:</strong>
-          <span>{{result.zip}}</span>
-      </p>
-      <p>
-          <strong>Phone Number:</strong>
-          <span>{{result.phone_number}}</span>
-      </p>
-      <p>
-          <strong>Email Address:</strong>
-          <span>{{result.email_address}}</span>
-      </p>
+          <div class="col-md-6">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <!-- <p>
+                  <strong>First Name:</strong>
+                  <span>{{result.first_name}}</span>
+                </p>
+                <p>
+                    <strong>Last Name:</strong>
+                    <span>{{result.last_name}}</span>
+                </p> -->
+                <p>
+                    <strong>Address:</strong>
+                    <span>{{result.address_line_1}}</span>
+                </p>
+                {{#if result.address_line_2}}
+                <p>
+                    <strong>Address Line 2:</strong>
+                    <span>{{result.address_line_2}}</span>
+                </p>
+                {{else}}
+                {{/if}}
+                <p>
+                    <strong>City:</strong>
+                    <span>{{result.city}}</span>
+                </p>
+                <p>
+                    <strong>State:</strong>
+                    <span>{{result.state}}</span>
+                </p>
+                <p>
+                    <strong>Zip:</strong>
+                    <span>{{result.zip}}</span>
+                </p>
+                <p>
+                    <strong>Phone Number:</strong>
+                    <span>{{result.phone_number}}</span>
+                </p>
+                <p>
+                    <strong>Email Address:</strong>
+                    <span>{{result.email_address}}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <p>Actions<br>
+                <a href=""><span class="fa fa-pencil-square-o"></span> Edit Profile</a><br>
+                <a href=""><span class="fa fa-plus"></span> Add a Pet</a><br>
+                <a href=""><span class="fa fa-search"></span> Find a Walker</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-      <p>
-          <strong>Favorited Walkers</strong>
-      </p>
-      <p>
-          <strong>Name:</strong>
-          <span>Glenn</span>
-      </p>
-      <p>
-          <strong>Available Appointments:</strong>
-          <span>Calender</span>
-      </p>
   </div>
-</div>
 </body>
