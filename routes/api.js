@@ -19,7 +19,7 @@ function getFilterID(resource) {
     rp(request)
     .then(result => {
       let resultArray = JSON.parse(result);
-      res.render('showData', {
+      res.render('editWalker', {
         result: resultArray
       })
     })
