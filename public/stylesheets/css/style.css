@@ -7996,6 +7996,10 @@ h5 {
   font-size: 1.5em;
 }
 
+blockquote {
+  border-left: none;
+}
+
 .row-featured {
   text-align: center;
   text-align-padding: 20px 0px 20px 0px;
