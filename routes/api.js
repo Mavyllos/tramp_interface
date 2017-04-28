@@ -1,6 +1,5 @@
 const rp = require('request-promise')
 
-
 function getResouces(resource) {
   return function (req, res) {
     rp(resource)
@@ -274,7 +273,6 @@ function updateResourceWalker(resource) {
 }
 
 
-
 function deleteResource(resource) {
   return function (req,res) {
     let id = req.params.id
@@ -290,7 +288,6 @@ function deleteResource(resource) {
     })
   }
 }
-
 
 
 
