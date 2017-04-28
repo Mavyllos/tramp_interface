@@ -1,89 +1,121 @@
 <body>
-  <div class="container-fluid">
-    <div class="row user-row">
-      <div class="panel panel-default">
-        <div class="panel-body main-panel">
-          <h5> Welcome {{result.first_name}} {{result.last_name}}</h5>
-          <div class="col-md-4">
+    <div class="container-fluid">
+        <div class="row user-row">
             <div class="panel panel-default">
-              <div class="panel-body">
-                <p>
-                  {{#if result.image}}
-                  <img src="{{ result.image }}"
-                  alt="{{ result.first_name }}" height="300" width="300"
-                  class="user-image">
-                  {{else}}
-                  {{/if}}
-                </p>
-                <p>
-                  <a href="">View Upcoming Appointments</a>
-                </p>
-                <p>
-                  <a href="">Favorite Walkers</a>
-                </p>
-              </div>
-            </div>
-          </div>
+                <div class="panel-body main-panel">
+                    <h5> Welcome {{result.first_name}} {{result.last_name}}</h5>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <p>
+                                    <img src="http://www.critterfiles.com/wp-content/uploads/2016/02/queencorgi-1.jpg" alt="" height="300" width="300" class="dogs-image">
+                                </p>
+                                <p>
+                                    <a href="">View Upcoming Appointments</a>
+                                </p>
+                                <p>
+                                    <a href="">Favorite Walkers</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-          <div class="col-md-6">
-            <div class="panel panel-default">
-              <div class="panel-body">
-                <!-- <p>
-                  <strong>First Name:</strong>
-                  <span>{{result.first_name}}</span>
-                </p>
-                <p>
-                    <strong>Last Name:</strong>
-                    <span>{{result.last_name}}</span>
-                </p> -->
-                <p>
-                    <strong>Address:</strong>
-                    <span>{{result.address_line_1}}</span>
-                </p>
-                {{#if result.address_line_2}}
-                <p>
-                    <strong>Address Line 2:</strong>
-                    <span>{{result.address_line_2}}</span>
-                </p>
-                {{else}}
-                {{/if}}
-                <p>
-                    <strong>City:</strong>
-                    <span>{{result.city}}</span>
-                </p>
-                <p>
-                    <strong>State:</strong>
-                    <span>{{result.state}}</span>
-                </p>
-                <p>
-                    <strong>Zip:</strong>
-                    <span>{{result.zip}}</span>
-                </p>
-                <p>
-                    <strong>Phone Number:</strong>
-                    <span>{{result.phone_number}}</span>
-                </p>
-                <p>
-                    <strong>Email Address:</strong>
-                    <span>{{result.email_address}}</span>
-                </p>
-              </div>
-            </div>
-          </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <p>
+                                            <strong>Address:</strong>
+                                            <span>{{result.address_line_1}}</span>
+                                        </p>
+                                        {{#if result.address_line_2}}
+                                            <p>
+                                                <strong>Address Line 2:</strong>
+                                                <span>{{result.address_line_2}}</span>
+                                            </p>
+                                        {{else}}
+                                        {{/if}}
+                                        <p>
+                                            <strong>City:</strong>
+                                            <span>{{result.city}}</span>
+                                        </p>
+                                        <p>
+                                            <strong>State:</strong>
+                                            <span>{{result.state}}</span>
+                                        </p>
+                                        <p>
+                                            <strong>Zip:</strong>
+                                            <span>{{result.zip}}</span>
+                                        </p>
+                                        <p>
+                                            <strong>Phone Number:</strong>
+                                            <span>{{result.phone_number}}</span>
+                                        </p>
+                                        <p>
+                                            <strong>Email Address:</strong>
+                                            <span>{{result.email_address}}</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                          <a data-toggle="collapse" href="#collapse1" class="fa fa-plus-square-o"</span> Added Pets:</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse1" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <h6>Prince Ruffington Windsor</h6>
+                                            <p>
+                                                <strong>Breed:</strong>
+                                                <span>Corgi</span>
+                                            </p>
+                                            <p>
+                                                <strong>Size:</strong>
+                                                <span>Medium</span>
+                                            </p>
+                                            <p>
+                                                <strong>Has Allergies?:</strong>
+                                                <span>Yes</span>
+                                            </p>
+                                            <p>
+                                                <strong>Likes other dogs?:</strong>
+                                                <span>No</span>
+                                            </p>
+                                            <p>
+                                                <strong>Likes People?:</strong>
+                                                <span>Yes</span>
+                                            </p>
+                                            <p>
+                                                <strong>Favorite Treat:</strong>
+                                                <span>Snasauges</span>
+                                            </p>
+                                            <p>
+                                                <strong>Bio:</strong>
+                                                <span>Lord of the manor that loves long walks and chasing squirrels.  Is allergic to chicken and prefers duck treats and playing with kids</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-          <div class="col-md-2">
-            <div class="panel panel-default">
-              <div class="panel-body">
-                <p>Actions<br>
-                  <a href=""><span class="fa fa-search"></span> Find a Walker</a><br>
-                  <a href=""><span class="fa fa-plus"></span> Add a Pet</a><br>
-                  <a href=""><span class="fa fa-pencil-square-o"></span> Edit Pet</a><br>
-                  <a href="/owners/{{result.id}}"><span class="fa fa-pencil-square-o"></span> Edit Profile</a><br>
-              </p>
+                    <div class="col-md-2">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <p>Actions<br>
+                                    <a href=""><span class="fa fa-search"></span> Find a Walker</a><br>
+                                    <a href=""><span class="fa fa-plus"></span> Add a Pet</a><br>
+                                    <a href=""><span class="fa fa-pencil-square-o"></span> Edit Pet</a><br>
+                                    <a href="/owners/{{result.id}}"><span class="fa fa-pencil-square-o"></span> Edit Profile</a><br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </body>

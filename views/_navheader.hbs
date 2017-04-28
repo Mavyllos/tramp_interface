@@ -16,33 +16,33 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     {{#if result.id }}
-                    <li>
-                      <button type="button" id="logout" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#logout"><a href="/" class"logout" id="logout">Logout</a></button>
-                    </li>
+                        <li>
+                            <button type="button" id="logout" class="btn btn-default navbar-btn" data-toggle="modal"><a href="/" class"logout" id="logout">Logout</a></button>
+                        </li>
                     {{else}}
-                    <li>
-                        <a class="page-scroll" href="#about">About Us</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#faq">F.A.Q.</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" id="contact-link" href="#footer">Contact Us</a>
-                    </li>
-                  </ul>
-                  <ul class="nav navbar-nav nav-bttns">
-                    <div>
-                    <li>
-                      <button type="button" id="login" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#at-login">Login</button>
-                    </li>
-                    <li>
-                      <button type="button" id="signup" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#at-signup">Register</button>
-                    </li>
-                    {{/if}}
+                        <li>
+                            <a class="page-scroll" href="#about">About Us</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#faq">F.A.Q.</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" id="contact-link" href="#footer">Contact Us</a>
+                        </li>
                 </ul>
-              </div>
+                <ul class="nav navbar-nav nav-bttns">
+                    <div>
+                        <li>
+                            <button type="button" id="login" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#at-login">Login</button>
+                        </li>
+                        <li>
+                            <button type="button" id="signup" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#at-signup">Register</button>
+                        </li>
+                        {{/if}}
+                </ul>
+                </div>
             </div>
         </div>
     </nav>
-  {{> signup}}
+    {{> signup}}
 </header>
