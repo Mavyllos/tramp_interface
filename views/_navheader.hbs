@@ -10,39 +10,46 @@
                 </button>
                 <a class="navbar page-scroll" href="/"><img src="/images/Logomakr_6ckHHb.png" alt=""></a>
             </div>
+            {{#if result.id }}
             <div class="collapse navbar-collapse navbar-ex1-collapse navbar-right">
-                <ul class="nav navbar-nav">
-                    <li class="hidden">
-                        <a class="page-scroll" href="#page-top"></a>
-                    </li>
-                    {{#if result.id }}
-                        <li>
-                            <button type="button" id="logout" class="btn btn-default navbar-btn" data-toggle="modal"><a href="/" class"logout" id="logout">Logout</a></button>
-                        </li>
-                    {{else}}
-                        <li>
-                            <a class="page-scroll" href="#about">About Us</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#faq">F.A.Q.</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" id="contact-link" href="#footer">Contact Us</a>
-                        </li>
-                </ul>
-                <dl class="nav navbar-nav nav-bttns">
-                    <div>
-                        <li>
-                            <button type="button" id="login" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#at-login">Login</button>
-                        </li>
-                        <li>
-                            <button type="button" id="signup" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#at-signup">Register</button>
-                        </li>
-                        {{/if}}
-                      </div>
-                </dl>
+              <ul class="nav navbar-nav">
+                <li class="hidden">
+                    <a class="page-scroll" href="#page-top"></a>
+                </li>
+                <li>
+                    <button type="button" id="logout" class="btn btn-default navbar-btn" data-toggle="modal"><a href="/" class"logout" id="logout">Logout</a></button>
+                </li>
+              </ul>
             </div>
+            {{else}}
+            <div class="collapse navbar-collapse navbar-ex1-collapse navbar-right">
+              <ul class="nav navbar-nav">
+                <li class="hidden">
+                    <a class="page-scroll" href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#about">About Us</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#faq">F.A.Q.</a>
+                </li>
+                <li>
+                    <a class="page-scroll" id="contact-link" href="#footer">Contact Us</a>
+                </li>
+              </ul>
+            <div class="col-md-4 nav-btns">
+              <ul class="nav navbar-nav nav-bttns">
+                <li>
+                    <button type="button" id="login" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#at-login">Login</button>
+                </li>
+                <li>
+                    <button type="button" id="signup" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#at-signup">Register</button>
+                </li>
+              </ul>
+          </div>
         </div>
+            {{/if}}
+      </div>
     </nav>
     {{> signup}}
 </header>

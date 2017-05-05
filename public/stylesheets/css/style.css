@@ -7801,7 +7801,7 @@ main {
 }
 
 #logout {
-  margin-top: 55px;
+  margin-top: 25px;
 }
 
 #logout a {
@@ -7829,6 +7829,13 @@ h5 {
   height: 60px;
   width: auto;
   position: fixed;
+}
+
+.nav-btns {
+  float: right;
+  padding-left: 10px;
+  padding-right: 0px;
+  margin-right: 0px;
 }
 
 @media (min-width: 700px) {
