@@ -1,5 +1,5 @@
-<section class="at-login-form">
-    <div class="modal fade" id="at-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="at-login-form">
+    <div class="modal fade" id="at-login" tabindex="-1" role="dialog" aria-label="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -19,8 +19,8 @@
                             <div class="tab-pane active in" id="login-as-owner">
                                 <form action="session" method="post">
                                     <fieldset class="form-group">
-                                        <input type="email" class="form-control-form " id="email" placeholder="Owner Email" name="email" value="{{ this.email}}">
-                                        <input type="password" class="form-control-form " id="password" placeholder="Password" name="password" value="{{ this.password }}">
+                                        <input type="email" class="form-control-form" id="login-owner-email" placeholder="Owner Email" name="email" value="{{ this.email}}">
+                                        <input type="password" class="form-control-form " id="login-owner-password" placeholder="Password" name="password" value="{{ this.password }}">
                                     </fieldset>
                                     <div class="row">
                                         <div class="col-md-6">
@@ -40,8 +40,8 @@
                             <div class="tab-pane fade" id="login-as-walker">
                                 <form action="session2" method="post" id="tab">
                                     <fieldset class="form-group">
-                                        <input type="email" class="form-control-form " id="email" placeholder="Walker Email" name="email" value="{{ this.email}}">
-                                        <input type="password" class="form-control-form " id="password" placeholder="Password" name="password" value="{{ this.password }}">
+                                        <input type="email" class="form-control-form " id="login-walker-email" placeholder="Walker Email" name="email" value="{{ this.email}}">
+                                        <input type="password" class="form-control-form " id="login-walker-password" placeholder="Password" name="password" value="{{ this.password }}">
                                     </fieldset>
                                     <div class="row">
                                         <div class="col-md-6">
@@ -75,15 +75,15 @@
         </div>
     </div>
 
-    <div class="modal fade" id="at-signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="at-signup" tabindex="-1" role="dialog" aria-label="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                     <form action="session" method="post">
                         <fieldset class="form-group">
-                            <input type="email" class="form-control-form " id="email" placeholder="email" name="email" value="{{ this.email}}">
-                            <input type="text" class="form-control-form " id="password" placeholder="Password" name="password" value="{{ this.password }}">
+                            <input type="email" class="form-control-form " id="signup-email" placeholder="email" name="email" value="{{ this.email}}">
+                            <input type="text" class="form-control-form " id="signup-password" placeholder="Password" name="password" value="{{ this.password }}">
                         </fieldset>
                         <p class="modal-body">By signing up, I agree to Tramp’s <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
                         <button type="submit" class="btn-lgin">Signup</button>
@@ -103,7 +103,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="at-reset-pswd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="at-reset-pswd" tabindex="-1" role="dialog" aria-label="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -114,7 +114,7 @@
                         <p> Enter the email address associated with your account, and we’ll email you a link to reset your password. </p>
                         <div class="form-group">
 
-                            <input type="email" class="form-control-form " id="exampleInputEmaillog" placeholder="Email">
+                            <input type="email" class="form-control-form " id="reset-link-email" placeholder="Email">
                         </div>
                     </form>
                 </div>
@@ -125,7 +125,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="at-helping" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="at-helping" tabindex="-1" role="dialog" aria-label="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -134,7 +134,7 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <input type="text" class="form-control-form " id="exampleInputEmaillog" placeholder="Enter Your Searches ">
+                            <input type="text" class="form-control-form " id="reset-email" placeholder="Enter Your Searches ">
                         </div>
                     </form>
                 </div>
@@ -146,4 +146,4 @@
             </div>
         </div>
     </div>
-</section>
+</div>

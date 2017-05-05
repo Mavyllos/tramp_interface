@@ -7737,7 +7737,7 @@ button.close {
 }
 
 body {
-  padding: 70px;
+  padding: 35px;
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   font-size: 24px;
   background-color: #FCFBF9;
@@ -7763,7 +7763,7 @@ a {
 }
 
 main {
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
 .intro-section, .faq-section, .walkers-section {
@@ -7782,6 +7782,14 @@ main {
 
 .userProfile, .form-control, input, label, placeholder {
   font-size: 14px;
+}
+
+.about-section {
+  margin-top: 80px;
+}
+
+.faq-section {
+  margin-bottom: 80px;
 }
 
 .navbar-nav, .navbar-btn {
